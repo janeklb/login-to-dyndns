@@ -1,14 +1,18 @@
-var casper = require('casper').create();
-var formSelector = '#loginbox form';
-var url = 'https://account.dyn.com/entrance/';
 
-var username = casper.cli.get('username');
-var password = casper.cli.get('password');
-var userAgent = casper.cli.get('ua') || 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22';
-var expectedTitle = casper.cli.get('expectedTitle') || 'My Dyn Account';
+var casper = require('casper').create();
+
+var formSelector = '#loginbox form',
+    url = 'https://account.dyn.com/entrance/',
+    defaultExpectedTitle = 'My Dyn Account',
+    defaultUA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22';
+
+var username = casper.cli.get('username'),
+    password = casper.cli.get('password'),
+    userAgent = casper.cli.get('ua') || defaultUA,
+    expectedTitle = casper.cli.get('expectedTitle') || defaultExpectedTitle;
 
 if (!username || !password) {
-	casper.echo("Please supply a --username=xxx and --password=yyy");
+	casper.echo("usage: casperjs loginToDynDns.js --username=USERNAME --password=PASSWORD");
 	casper.exit();
 }
 
@@ -24,7 +28,7 @@ casper.thenOpen(url, function() {
 		this.echo("Logging in...");
 		this.fill(formSelector, { username: username, password: password }, true);
 	} else {
-		this.echo("Was unable to find login form (using selector: " + formSelector);
+		this.echo("Was unable to find login form (using selector: " + formSelector + ").");
 		this.exit();
 	}
 });
@@ -35,7 +39,7 @@ casper.then(function() {
 		this.echo('Everything looks ok!');
 	} else {
 		this.echo('Unexpected page title: ' + title);
-		this.echo('Verify your login details');
+		this.echo('Unable to confirm login, please verify your login details.');
 	}
 });
 
