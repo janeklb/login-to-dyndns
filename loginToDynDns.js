@@ -4,6 +4,7 @@ var url = 'https://account.dyn.com/entrance/';
 
 var username = casper.cli.get('username');
 var password = casper.cli.get('password');
+var userAgent = casper.cli.get('ua') || 'Mozilla/5.0 (Macintosh; Intel Mac OS X)';
 var expectedTitle = casper.cli.get('expectedTitle') || 'My Dyn Account';
 
 if (!username || !password) {
@@ -13,9 +14,10 @@ if (!username || !password) {
 
 casper.start();
 
-casper.userAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X)');
+casper.echo("Using user agent: " + userAgent);
+casper.userAgent(username);
 
-casper.echo("Loading " + url);
+casper.echo("Loading url: " + url);
 casper.thenOpen(url, function() {
 	this.echo("Loaded page titled: " + this.getTitle());
 	if (this.exists(formSelector)) {

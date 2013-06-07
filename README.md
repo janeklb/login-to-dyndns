@@ -5,7 +5,11 @@ Install [PhantomJS](http://phantomjs.org/download.html) and [CasperJS](http://ca
 ## Usage
 
 ```bash
-$ casperjs loginToDynDns.js --username=DYNDNS_USERNAME --password=DYNDNS_PASSWORD
+$ # replace USERNAME and PASSWORD
+$ casperjs loginToDynDns.js --username=USERNAME --password=PASSWORD
+
+$ # with optional user-agent argument:
+$ casperjs loginToDynDns.js --username=... --password=... --ua="Mozilla/5.0 (Macintosh; Intel Mac OS X)"
 ```
 
 ### Tips
