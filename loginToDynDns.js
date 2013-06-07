@@ -4,7 +4,7 @@ var url = 'https://account.dyn.com/entrance/';
 
 var username = casper.cli.get('username');
 var password = casper.cli.get('password');
-var userAgent = casper.cli.get('ua') || 'Mozilla/5.0 (Macintosh; Intel Mac OS X)';
+var userAgent = casper.cli.get('ua') || 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22';
 var expectedTitle = casper.cli.get('expectedTitle') || 'My Dyn Account';
 
 if (!username || !password) {
