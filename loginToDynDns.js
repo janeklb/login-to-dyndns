@@ -13,7 +13,7 @@ var username = casper.cli.get('username'),
 
 if (!username || !password) {
 	casper.echo("usage: casperjs loginToDynDns.js --username=USERNAME --password=PASSWORD");
-	casper.exit();
+	casper.exit(1);
 }
 
 casper.start();
@@ -29,7 +29,7 @@ casper.thenOpen(url, function() {
 		this.fill(formSelector, { username: username, password: password }, true);
 	} else {
 		this.echo("Was unable to find login form (using selector: " + formSelector + ").");
-		this.exit();
+		this.exit(1);
 	}
 });
 
@@ -40,6 +40,7 @@ casper.then(function() {
 	} else {
 		this.echo('Unexpected page title: ' + title);
 		this.echo('Unable to confirm login, please verify your login details.');
+        this.exit(1);
 	}
 });
 
