@@ -11,7 +11,7 @@ $ npm install -g login-to-dyndns
 $ login-to-dyndns --install
 ```
 
-### Run via node module binary
+### Run from executable (via npm module)
 
 ```bash
 $ npm install -g login-to-dyndns
