@@ -21,7 +21,7 @@ RunCasper () {
 
 Install () {
 
-    echo "Installing loginToDynDns into your crontab ..."
+    echo "Installing login-to-dyndns into your crontab ..."
     read -p "Enter the day of the week (0-6): " day
     read -p "Enter the hour (0-23): " hour
     read -p "Enter your DynDns username: " username
@@ -39,7 +39,7 @@ Install () {
 
     read -p "Confirm [y/n]: " yn
     if [ "$yn" = "y" ]; then
-        tmp=/tmp/loginToDynDns.crontab
+        tmp=/tmp/login-to-dyndns.crontab
         crontab -l > $tmp
         echo "$line" >> $tmp
         crontab $tmp

@@ -12,7 +12,7 @@ var username = casper.cli.get('username'),
     expectedTitle = casper.cli.get('expectedTitle') || defaultExpectedTitle;
 
 if (!username || !password) {
-	casper.echo("usage: casperjs loginToDynDns.js --username=USERNAME --password=PASSWORD");
+	casper.echo("usage: casperjs ./src/login-to-dyndns.js --username=USERNAME --password=PASSWORD");
 	casper.exit(1);
 }
 
