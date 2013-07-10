@@ -15,7 +15,7 @@ if [ ! -x "$casperPath" ]; then
 fi
 
 RunCasper () {
-    casperjs "$modulePath/src/loginToDynDns.js" "$@"
+    casperjs "$modulePath/src/login-to-dyndns.js" "$@"
     exit $?
 }
 
@@ -28,7 +28,7 @@ Install () {
     read -p "Enter your DynDns password: " password
     read -p "Enter a User Agent string (optional): " ua
 
-    command="$casperPath $modulePath/src/loginToDynDns.js --username='$username' --password='$password'"
+    command="$casperPath $modulePath/src/login-to-dyndns.js --username='$username' --password='$password'"
     if [ -n "$ua" ]; then
         command="$command --ua='$ua'"
     fi
