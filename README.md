@@ -8,14 +8,14 @@ Install [PhantomJS](http://phantomjs.org/download.html) and [CasperJS](http://ca
 
 ```bash
 $ npm install -g login-to-dyndns
-$ loginToDynDns --install
+$ login-to-dyndns --install
 ```
 
 ### Run via node module binary
 
 ```bash
 $ npm install -g login-to-dyndns
-$ loginToDynDns --username=USERNAME --password=PASSWORD --ua=USERAGENT
+$ login-to-dyndns --username=USERNAME --password=PASSWORD --ua=USERAGENT
 ```
 
 ### Directly

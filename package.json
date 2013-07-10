@@ -1,6 +1,6 @@
 {
   "name": "login-to-dyndns",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Auto-login script to DynDns using CapserJS, in order to keep your free account active.",
   "main": "src/login-to-dyndns.js",
   "bin": {
