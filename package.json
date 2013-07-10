@@ -1,0 +1,23 @@
+{
+  "name": "loginToDynDns",
+  "version": "0.1.0",
+  "description": "Auto-login script to DynDns using CapserJS, in order to keep your free account active.",
+  "main": "src/loginToDynDns.js",
+  "bin": {
+      "loginToDynDns": "./bin/loginToDynDns.sh"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/janeklb/loginToDynDns.git"
+  },
+  "keywords": [
+    "dyndns"
+  ],
+  "author": "Janek Lasocki-Biczysko <iamjanek@gmail.com>",
+  "license": "MIT",
+  "gitHead": "045829253fb774741a224bb9bb3a7cef713175af",
+  "readmeFilename": "README.md"
+}

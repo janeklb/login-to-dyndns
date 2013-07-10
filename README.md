@@ -4,14 +4,23 @@ Install [PhantomJS](http://phantomjs.org/download.html) and [CasperJS](http://ca
 
 ## Usage
 
-```bash
-$ # replace USERNAME and PASSWORD
-$ casperjs loginToDynDns.js --username=USERNAME --password=PASSWORD
+### Install to Crontab
 
-$ # with optional user-agent argument:
-$ casperjs loginToDynDns.js --username=... --password=... --ua="Mozilla/5.0 (Macintosh; Intel Mac OS X)"
+```bash
+$ npm install -g loginToDynDns
+$ loginToDynDns --install
 ```
 
-### Tips
+### Run via node module binary
 
-- setup a cron job and fughettabbbadiiiiittt!
+```bash
+$ npm install -g loginToDynDns
+$ loginToDynDns --username=USERNAME --password=PASSWORD --ua=USERAGENT
+```
+
+### Directly
+
+```bash
+$ casperjs ./src/loginToDynDns.js --username=USERNAME --password=PASSWORD --ua=USERAGENT
+```
+
