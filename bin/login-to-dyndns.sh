@@ -2,10 +2,10 @@
 
 npmPath=`which npm`
 npmBinDir=`dirname "$npmPath"`
-modulePath=`readlink -f "$npmBinDir/../lib/node_modules/loginToDynDns"`
+modulePath=`readlink -f "$npmBinDir/../lib/node_modules/login-to-dyndns"`
 if [ ! -x "$modulePath" ]; then
     echo "loginByDynDns needs to be installed as a global npm module"
-#    exit 1
+    exit 1
 fi
 
 casperPath=`which casperjs`
@@ -64,6 +64,6 @@ while test $# -gt 0; do
 done
 
 if [ $# -eq 0 ]; then
-    echo "usage: loginToDynDns --username=USERNAME --password=PASSWORD"
+    echo "usage: login-to-dyndns --username=USERNAME --password=PASSWORD"
 fi
 
