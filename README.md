@@ -21,6 +21,7 @@ $ login-to-dyndns --username=USERNAME --password=PASSWORD --ua=USERAGENT
 ### Directly
 
 ```bash
+$ git clone git@github.com:janeklb/login-to-dyndns.git && cd login-to-dyndns
 $ casperjs ./src/login-to-dyndns.js --username=USERNAME --password=PASSWORD --ua=USERAGENT
 ```
 
