@@ -1,9 +1,8 @@
-
 var casper = require('casper').create();
 
 var formSelector = '#loginbox form',
     url = 'https://account.dyn.com/entrance/',
-    defaultExpectedTitle = 'My Dyn Account',
+    defaultExpectedTitle = 'Create Dyn Account or Login',
     defaultUA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22';
 
 var username = casper.cli.get('username'),
