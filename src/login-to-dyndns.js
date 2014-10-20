@@ -40,7 +40,7 @@ casper.then(function() {
 	} else {
 		this.echo('Unexpected page title: ' + title);
 		this.echo('Unable to confirm login, please verify your login details.');
-        this.exit(1);
+		this.exit(1);
 	}
 });
 
